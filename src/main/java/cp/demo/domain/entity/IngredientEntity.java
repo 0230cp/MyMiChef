@@ -3,16 +3,15 @@ package cp.demo.domain.entity;
 import lombok.*;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
-@Table(name = "mymealtbl")
-@Entity
 @Getter
 @Setter
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
-public class MyMealEntity {
+@Table(name = "ingredtbl")
+@Entity
+public class IngredientEntity {
 
     @Id
     @Column(name = "id", columnDefinition = "INT")
@@ -23,14 +22,13 @@ public class MyMealEntity {
     @JoinColumn(name = "menuId")
     private MenuEntity menuEntity;
 
-    @ManyToOne
-    @JoinColumn(name = "userId")
-    private UserEntity userEntity;
+    @Column(name = "name", columnDefinition = "varchar")
+    private String name;
 
-    @Column(name = "date", columnDefinition = "DATE")
-    private String date;
+    @Column(name = "capacity", columnDefinition = "Long")
+    private Long capacity;
 
-    @Column(name = "time", columnDefinition = "varchar")
-    private String time;
+    @Column(name = "unit", columnDefinition = "varchar")
+    private String unit;
 
 }

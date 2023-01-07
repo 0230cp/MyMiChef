@@ -19,20 +19,20 @@ import javax.persistence.Table;
 public class MenuEntity {
 
     @Id
-    @Column(name = "menuId", columnDefinition = "INT")
-    private String menuid;
+    @Column(name = "menuId", columnDefinition = "varchar")
+    private String menuId;
 
     @Column(name = "menuName", columnDefinition = "varchar")
-    private String menuname;
+    private String menuName;
 
     @Column(name = "nationName", columnDefinition = "varchar")
-    private String nationname;
+    private String nationName;
 
     @Column(name = "calorie", columnDefinition = "varchar")
     private String calorie;
 
     @Column(name = "levelName", columnDefinition = "varchar")
-    private String levelname;
+    private String levelName;
 
     @Column(name = "recipe", columnDefinition = "TEXT")
     private String recipe;
