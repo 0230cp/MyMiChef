@@ -22,13 +22,13 @@ public class IngredientEntity {
     @JoinColumn(name = "menuId")
     private MenuEntity menuEntity;
 
-    @Column(name = "name", columnDefinition = "varchar")
+    @Column(name = "name", columnDefinition = "varchar(256)")
     private String name;
 
-    @Column(name = "capacity", columnDefinition = "Long")
+    @Column(name = "capacity", columnDefinition = "INT")
     private Long capacity;
 
-    @Column(name = "unit", columnDefinition = "varchar")
+    @Column(name = "unit", columnDefinition = "varchar(256)")
     private String unit;
 
 }

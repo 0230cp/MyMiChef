@@ -14,13 +14,13 @@ import javax.validation.constraints.NotNull;
 @AllArgsConstructor
 public class UserEntity {
     @Id
-    @Column(name = "userId" , columnDefinition = "varchar")
+    @Column(name = "userId" , columnDefinition = "varchar(256)")
     private String userId;
 
-    @Column(name = "password", columnDefinition = "varchar")
+    @Column(name = "password", columnDefinition = "varchar(256)")
     private String password;
 
-    @Column(name = "name", columnDefinition = "varchar")
+    @Column(name = "name", columnDefinition = "varchar(256)")
     private String name;
 
     @Column(name = "height", columnDefinition = "INT")

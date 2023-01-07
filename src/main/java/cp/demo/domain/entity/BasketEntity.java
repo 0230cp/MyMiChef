@@ -20,20 +20,20 @@ public class BasketEntity {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "userId")
+    @JoinColumn(name = "userId",columnDefinition = "varchar(256)")
     private UserEntity userEntity;
 
     @ManyToOne()
-    @JoinColumn(name = "myMealId")
+    @JoinColumn(name = "myMealId",columnDefinition = "INT")
     private MyMealEntity myMealEntity;
 
-    @Column(name = "ingredName", columnDefinition = "varchar")
+    @Column(name = "ingredName", columnDefinition = "varchar(256)")
     private String ingredName;
 
-    @Column(name = "capacity", columnDefinition = "LONG")
+    @Column(name = "capacity", columnDefinition = "INT")
     private Long capacity;
 
-    @Column(name = "unit", columnDefinition = "varchar")
+    @Column(name = "unit", columnDefinition = "varchar(256)")
     private String unit;
 
 }

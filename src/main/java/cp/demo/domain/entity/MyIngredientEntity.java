@@ -20,16 +20,16 @@ public class MyIngredientEntity {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "userId", columnDefinition = "varchar")
+    @JoinColumn(name = "userId", columnDefinition = "varchar(256)")
     private UserEntity userEntity;
 
-    @Column(name = "ingredName", columnDefinition = "varchar")
+    @Column(name = "ingredName", columnDefinition = "varchar(256)")
     private String ingredName;
 
     @Column(name = "capacity", columnDefinition = "INT")
     private Long capacity;
 
-    @Column(name = "unit", columnDefinition = "varchar")
+    @Column(name = "unit", columnDefinition = "varchar(256)")
     private String unit;
 
 

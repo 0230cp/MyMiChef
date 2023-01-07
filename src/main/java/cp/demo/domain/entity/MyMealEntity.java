@@ -30,7 +30,7 @@ public class MyMealEntity {
     @Column(name = "date", columnDefinition = "DATE")
     private String date;
 
-    @Column(name = "time", columnDefinition = "varchar")
+    @Column(name = "time", columnDefinition = "varchar(256)")
     private String time;
 
 }

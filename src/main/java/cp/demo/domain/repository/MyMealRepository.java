@@ -1,6 +1,7 @@
 package cp.demo.domain.repository;
 
+import cp.demo.domain.entity.MyMealEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface MyMealRepository extends JpaRepository<MyMealRepository, Long> {
+public interface MyMealRepository extends JpaRepository<MyMealEntity, Long> {
 }
