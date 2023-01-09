@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2efd5a49-7d2a-454c-a313-9d2133b218ef" name="Changes" comment="create spring project" />
+    <list default="true" id="2efd5a49-7d2a-454c-a313-9d2133b218ef" name="Changes" comment="create spring project">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cp/demo/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cp/demo/service/UserService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,7 +84,22 @@
       <recent name="cp.demo" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.joinServiceTest">
+  <component name="RunManager" selected="JUnit.LoginServiceTest">
+    <configuration name="LoginServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cp.demo.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cp.demo.service" />
+      <option name="MAIN_CLASS_NAME" value="cp.demo.service.LoginServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="joinServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo.test" />
       <extension name="coverage">
@@ -162,10 +181,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LoginServiceTest" />
         <item itemvalue="JUnit.joinServiceTest" />
-        <item itemvalue="JUnit.joinServiceTest.회원가입실패_저장문제" />
-        <item itemvalue="JUnit.joinServiceTest.회원가입실패_아이디중복이아닌경우" />
-        <item itemvalue="JUnit.joinServiceTest.회원가입실패_아이디중복" />
         <item itemvalue="JUnit.joinServiceTest.회원가입실패_입력값없음" />
       </list>
     </recent_temporary>

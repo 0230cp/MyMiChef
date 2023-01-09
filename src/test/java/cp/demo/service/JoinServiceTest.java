@@ -21,7 +21,7 @@ import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.doThrow;
 
 @ExtendWith(MockitoExtension.class)
-public class joinServiceTest {
+public class JoinServiceTest {
 
     @InjectMocks
     UserService userService;
