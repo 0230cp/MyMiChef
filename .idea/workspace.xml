@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2efd5a49-7d2a-454c-a313-9d2133b218ef" name="Changes" comment="create spring project">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cp/demo/domain/entity/BasketEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cp/demo/domain/entity/BasketEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cp/demo/domain/entity/IngredientEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cp/demo/domain/entity/IngredientEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cp/demo/domain/entity/MenuEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cp/demo/domain/entity/MenuEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cp/demo/domain/entity/MyIngredientEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cp/demo/domain/entity/MyIngredientEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cp/demo/domain/entity/MyMealEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cp/demo/domain/entity/MyMealEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cp/demo/domain/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cp/demo/domain/entity/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cp/demo/domain/repository/MyMealRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cp/demo/domain/repository/MyMealRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="2efd5a49-7d2a-454c-a313-9d2133b218ef" name="Changes" comment="create spring project" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,8 +30,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -86,23 +75,98 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
 }</component>
-  <component name="RunManager">
-    <configuration name="MyMiChefApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cp.demo.MyMiChefApplication" />
-      <module name="demo.main" />
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="cp.demo" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.joinServiceTest">
+    <configuration name="joinServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cp.demo.*" />
+          <option name="PATTERN" value="cp.demo.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="cp.demo.service" />
+      <option name="MAIN_CLASS_NAME" value="cp.demo.service.joinServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="joinServiceTest.회원가입실패_입력값없음" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cp.demo.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cp.demo.service" />
+      <option name="MAIN_CLASS_NAME" value="cp.demo.service.joinServiceTest" />
+      <option name="METHOD_NAME" value="회원가입실패_입력값없음" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="joinServiceTest.회원가입실패_아이디중복" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cp.demo.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cp.demo.service" />
+      <option name="MAIN_CLASS_NAME" value="cp.demo.service.joinServiceTest" />
+      <option name="METHOD_NAME" value="회원가입실패_아이디중복" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="joinServiceTest.회원가입실패_아이디중복이아닌경우" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cp.demo.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cp.demo.service" />
+      <option name="MAIN_CLASS_NAME" value="cp.demo.service.joinServiceTest" />
+      <option name="METHOD_NAME" value="회원가입실패_아이디중복이아닌경우" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="joinServiceTest.회원가입실패_저장문제" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cp.demo.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cp.demo.service" />
+      <option name="MAIN_CLASS_NAME" value="cp.demo.service.joinServiceTest" />
+      <option name="METHOD_NAME" value="회원가입실패_저장문제" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MyMiChefApplication" />
+        <item itemvalue="JUnit.joinServiceTest" />
+        <item itemvalue="JUnit.joinServiceTest.회원가입실패_저장문제" />
+        <item itemvalue="JUnit.joinServiceTest.회원가입실패_아이디중복이아닌경우" />
+        <item itemvalue="JUnit.joinServiceTest.회원가입실패_아이디중복" />
+        <item itemvalue="JUnit.joinServiceTest.회원가입실패_입력값없음" />
       </list>
     </recent_temporary>
   </component>
