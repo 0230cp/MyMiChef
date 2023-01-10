@@ -1,5 +1,6 @@
-package cp.demo.domain.entity;
+package cp.demo.security;
 
+import cp.demo.domain.entity.UserEntity;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 

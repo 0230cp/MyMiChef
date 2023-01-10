@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2efd5a49-7d2a-454c-a313-9d2133b218ef" name="Changes" comment="create spring project">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cp/demo/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cp/demo/service/UserService.java" afterDir="false" />
-    </list>
+    <list default="true" id="2efd5a49-7d2a-454c-a313-9d2133b218ef" name="Changes" comment="create spring project" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -35,8 +34,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Enum" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -62,6 +61,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
   <component name="ProjectId" id="2JofuMtRH0tdPWw8kqnzLe5Feny" />
   <component name="ProjectViewState">
     <option name="showExcludedFiles" value="false" />
@@ -84,17 +86,48 @@
       <recent name="cp.demo" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.LoginServiceTest">
+  <component name="RunManager" selected="JUnit.FindServiceTest">
+    <configuration name="FindServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cp.demo.service.UserServiceTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cp.demo.service.UserServiceTest" />
+      <option name="MAIN_CLASS_NAME" value="cp.demo.service.UserServiceTest.FindServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FindServiceTest.아이디찾기성공" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cp.demo.service.UserServiceTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cp.demo.service.UserServiceTest" />
+      <option name="MAIN_CLASS_NAME" value="cp.demo.service.UserServiceTest.FindServiceTest" />
+      <option name="METHOD_NAME" value="아이디찾기성공" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LoginServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cp.demo.service.*" />
+          <option name="PATTERN" value="cp.demo.service.UserServiceTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="cp.demo.service" />
-      <option name="MAIN_CLASS_NAME" value="cp.demo.service.LoginServiceTest" />
+      <option name="PACKAGE_NAME" value="cp.demo.service.UserServiceTest" />
+      <option name="MAIN_CLASS_NAME" value="cp.demo.service.UserServiceTest.LoginServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -104,7 +137,7 @@
       <module name="demo.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cp.demo.service.*" />
+          <option name="PATTERN" value="cp.demo.service.UserServiceTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -119,7 +152,7 @@
       <module name="demo.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cp.demo.service.*" />
+          <option name="PATTERN" value="cp.demo.service.UserServiceTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -181,6 +214,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FindServiceTest" />
+        <item itemvalue="JUnit.FindServiceTest.아이디찾기성공" />
         <item itemvalue="JUnit.LoginServiceTest" />
         <item itemvalue="JUnit.joinServiceTest" />
         <item itemvalue="JUnit.joinServiceTest.회원가입실패_입력값없음" />

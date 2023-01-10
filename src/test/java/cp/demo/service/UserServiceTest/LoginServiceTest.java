@@ -1,8 +1,9 @@
-package cp.demo.service;
+package cp.demo.service.UserServiceTest;
 
-import cp.demo.domain.entity.SecurityDetails;
+import cp.demo.security.SecurityDetails;
 import cp.demo.domain.entity.UserEntity;
 import cp.demo.domain.repository.UserRepository;
+import cp.demo.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

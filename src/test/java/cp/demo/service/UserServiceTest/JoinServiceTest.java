@@ -1,9 +1,10 @@
-package cp.demo.service;
+package cp.demo.service.UserServiceTest;
 
 import cp.demo.domain.entity.UserEntity;
 import cp.demo.domain.repository.UserRepository;
-import cp.exception.JoinErrorResult;
-import cp.exception.JoinException;
+import cp.demo.service.UserService;
+import cp.exception.UserServiceErrorResult;
+import cp.exception.UserServiceException;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -29,9 +30,6 @@ public class JoinServiceTest {
     @Mock
     UserRepository userRepository;
 
-//    @Mock
-//    JoinException joinException;
-
     private final String userId = "userId";
     private final String password = "password";
 
@@ -56,10 +54,10 @@ public class JoinServiceTest {
         doReturn(Optional.of(userEntity)).when(userRepository).findById(userId);
 
         //when
-        final JoinException result = assertThrows(JoinException.class, () -> userService.join(userId, password));
+        final UserServiceException result = assertThrows(UserServiceException.class, () -> userService.join(userId, password));
 
-        //then(
-        assertThat(result.getJoinErrorResult()).isEqualTo(JoinErrorResult.DUPLICATED_ID);
+        //then
+        assertThat(result.getUserServiceErrorResult()).isEqualTo(UserServiceErrorResult.DUPLICATED_ID);
 
     }
 
