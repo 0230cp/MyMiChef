@@ -34,8 +34,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -86,7 +86,7 @@
       <recent name="cp.demo" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FindServiceTest">
+  <component name="RunManager" selected="JUnit.MyPageServiceTest">
     <configuration name="FindServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo.test" />
       <extension name="coverage">
@@ -133,7 +133,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="joinServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MyPageServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo.test" />
       <extension name="coverage">
         <pattern>
@@ -141,14 +141,14 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="cp.demo.service" />
-      <option name="MAIN_CLASS_NAME" value="cp.demo.service.joinServiceTest" />
+      <option name="PACKAGE_NAME" value="cp.demo.service.UserServiceTest" />
+      <option name="MAIN_CLASS_NAME" value="cp.demo.service.UserServiceTest.MyPageServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="joinServiceTest.회원가입실패_입력값없음" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MyPageServiceTest.회원정보찾기성공" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo.test" />
       <extension name="coverage">
         <pattern>
@@ -156,9 +156,9 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="cp.demo.service" />
-      <option name="MAIN_CLASS_NAME" value="cp.demo.service.joinServiceTest" />
-      <option name="METHOD_NAME" value="회원가입실패_입력값없음" />
+      <option name="PACKAGE_NAME" value="cp.demo.service.UserServiceTest" />
+      <option name="MAIN_CLASS_NAME" value="cp.demo.service.UserServiceTest.MyPageServiceTest" />
+      <option name="METHOD_NAME" value="회원정보찾기성공" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -214,11 +214,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MyPageServiceTest" />
+        <item itemvalue="JUnit.MyPageServiceTest.회원정보찾기성공" />
         <item itemvalue="JUnit.FindServiceTest" />
         <item itemvalue="JUnit.FindServiceTest.아이디찾기성공" />
         <item itemvalue="JUnit.LoginServiceTest" />
-        <item itemvalue="JUnit.joinServiceTest" />
-        <item itemvalue="JUnit.joinServiceTest.회원가입실패_입력값없음" />
       </list>
     </recent_temporary>
   </component>

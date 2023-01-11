@@ -1,5 +1,6 @@
 package cp.demo.service;
 
+import cp.demo.dto.UserDTO;
 import cp.demo.security.SecurityDetails;
 import cp.demo.domain.entity.UserEntity;
 import cp.demo.domain.repository.UserRepository;
@@ -75,6 +76,34 @@ public class UserService implements UserDetailsService {
             return name;
         }
     }
+
+    /**
+     *  마이페이지 정보 불러오기 서비스
+     */
+
+    public UserDTO findUser(String userId){
+       Optional<UserEntity> userEntity = Optional.of(new UserEntity());
+        userEntity = userRepository.findById(userId);
+
+        if(userEntity.isEmpty()){
+            throw new UserServiceException(UserServiceErrorResult.NO_DATA);
+        }else {
+            return userEntity.get().toDto();
+        }
+    }
+
+    /**
+     *  마이페이지 정보 수정 서비스
+     */
+    public UserEntity modifyUser(UserDTO userDTO,String userId){
+        UserEntity userEntity=userRepository.findById(userId).get();
+        userEntity.setName(userDTO.getName());
+        userEntity.setCalorie(userDTO.getCalorie());
+        userEntity.setHeight(userDTO.getHeight());
+        userEntity.setWeight(userDTO.getWeight());
+        return userRepository.save(userEntity);
+    }
+
 }
 
 

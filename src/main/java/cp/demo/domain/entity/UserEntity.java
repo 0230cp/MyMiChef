@@ -1,5 +1,6 @@
 package cp.demo.domain.entity;
 
+import cp.demo.dto.UserDTO;
 import lombok.*;
 
 import javax.persistence.*;
@@ -31,4 +32,12 @@ public class UserEntity {
 
     @Column(name = "calorie", columnDefinition = "INT")
     private int calorie;
+
+    public UserDTO toDto(){
+        return UserDTO.builder()
+                .name(name)
+                .height(height)
+                .weight(weight)
+                .build();
+    }
 }
