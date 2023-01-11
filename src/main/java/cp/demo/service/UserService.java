@@ -6,9 +6,15 @@ import cp.demo.domain.entity.UserEntity;
 import cp.demo.domain.repository.UserRepository;
 import cp.exception.*;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.MailException;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
 
+import net.bytebuddy.implementation.bytecode.Throw;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -24,7 +30,8 @@ public class UserService implements UserDetailsService {
 
     private final UserServiceException userServiceException;
 
-
+    private final PasswordEncoder passwordEncoder;
+    private final JavaMailSender emailsender;
     /**
      * 회원가입 서비스
      *
@@ -40,7 +47,7 @@ public class UserService implements UserDetailsService {
         else {
             UserEntity userEntity = UserEntity.builder()
                     .userId(userId)
-                    .password(password).build();
+                    .password(passwordEncoder.encode(password)).build();
 
             return userRepository.save(userEntity);
         }
@@ -68,7 +75,7 @@ public class UserService implements UserDetailsService {
         UserEntity userEntity = userRepository.findByName(userName);
 
         if(userEntity == null){
-           throw new UserServiceException(UserServiceErrorResult.NO_DATA);
+            throw new UserServiceException(UserServiceErrorResult.NO_DATA);
         }
         else{
             String name;
@@ -76,6 +83,49 @@ public class UserService implements UserDetailsService {
             return name;
         }
     }
+
+    /**
+     * 비밀번호 찾기 서비스
+     * @param userId
+     * @param name
+     * @param email
+     */
+    public UserEntity findPw(String userId, String name, String email){
+        Optional<UserEntity> user= userRepository.findByUserIdAndNameAndEmail(userId,name,email);
+
+        if(user.isEmpty()){
+            throw new UserServiceException(UserServiceErrorResult.USER_NOT_FOUND);
+        }
+        String password=getTempPassword();
+        SimpleMailMessage message = new SimpleMailMessage();
+        message.setTo(email);
+        message.setFrom("rnjsgo2008@naver.com");
+        message.setSubject("[MyMichef] 임시 비밀번호 발급 입니다.");
+        String emailmsg = "회원님의 임시 비밀번호는 '" + password + "' 입니다." ;
+        message.setText(emailmsg);
+        UserEntity userEntity= user.get();
+        userEntity.setPassword(passwordEncoder.encode(password));
+        userRepository.save(userEntity);
+        emailsender.send(message);
+
+        return userEntity;
+    }
+    public String getTempPassword(){
+        char[] charSet = new char[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F',
+                'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
+
+        String str = "";
+
+        int idx = 0;
+        for (int i = 0; i < 10; i++) {
+            idx = (int) (charSet.length * Math.random());
+            str += charSet[idx];
+        }
+        return str;
+    }
+
+
+
 
     /**
      *  마이페이지 정보 불러오기 서비스

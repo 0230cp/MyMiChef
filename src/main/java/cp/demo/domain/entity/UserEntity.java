@@ -24,6 +24,9 @@ public class UserEntity {
     @Column(name = "name", columnDefinition = "varchar(256)")
     private String name;
 
+    @Column(name= "email", columnDefinition = "varchar(256)")
+    private String email;
+
     @Column(name = "height", columnDefinition = "INT")
     private int height;
 

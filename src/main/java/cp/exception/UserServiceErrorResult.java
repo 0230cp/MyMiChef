@@ -9,7 +9,8 @@ import org.springframework.http.HttpStatus;
 public enum UserServiceErrorResult {
 
     NO_DATA(HttpStatus.BAD_REQUEST, "NO DATA IN DATABASE")
-    ,DUPLICATED_ID(HttpStatus.BAD_REQUEST, "Duplicated Id Register Request");
+    ,DUPLICATED_ID(HttpStatus.BAD_REQUEST, "Duplicated Id Register Request")
+    ,USER_NOT_FOUND(HttpStatus.BAD_REQUEST, "User was not found");
 
 
     private final HttpStatus httpStatus;
