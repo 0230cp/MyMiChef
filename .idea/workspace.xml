@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2efd5a49-7d2a-454c-a313-9d2133b218ef" name="Changes" comment="create spring project">
+    <list default="true" id="2efd5a49-7d2a-454c-a313-9d2133b218ef" name="Changes" comment="UserService fin. (TDD)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cp/demo/domain/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cp/demo/domain/entity/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cp/demo/domain/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cp/demo/domain/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cp/demo/domain/entity/IngredientEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cp/demo/domain/entity/IngredientEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cp/demo/domain/entity/MenuEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cp/demo/domain/entity/MenuEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cp/demo/domain/entity/MyIngredientEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cp/demo/domain/entity/MyIngredientEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cp/demo/domain/repository/IngredientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cp/demo/domain/repository/IngredientRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cp/demo/domain/repository/MyIngredientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cp/demo/domain/repository/MyIngredientRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cp/demo/service/IngredientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cp/demo/service/IngredientService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cp/demo/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cp/demo/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cp/exception/UserServiceErrorResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cp/exception/UserServiceErrorResult.java" afterDir="false" />
     </list>
@@ -96,79 +100,80 @@
       <recent name="cp.demo" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FindServiceTest">
-    <configuration name="FindServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.DeleteMyIngredTest.식재료삭제_성공">
+    <configuration name="DeleteMyIngredTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cp.demo.service.UserServiceTest.*" />
+          <option name="PATTERN" value="cp.demo.service.IngredientServiceTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="cp.demo.service.UserServiceTest" />
-      <option name="MAIN_CLASS_NAME" value="cp.demo.service.UserServiceTest.FindServiceTest" />
+      <option name="PACKAGE_NAME" value="cp.demo.service.IngredientServiceTest" />
+      <option name="MAIN_CLASS_NAME" value="cp.demo.service.IngredientServiceTest.DeleteMyIngredTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FindServiceTest.아이디찾기성공" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DeleteMyIngredTest.식재료삭제_성공" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cp.demo.service.UserServiceTest.*" />
+          <option name="PATTERN" value="cp.demo.service.IngredientServiceTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="cp.demo.service.UserServiceTest" />
-      <option name="MAIN_CLASS_NAME" value="cp.demo.service.UserServiceTest.FindServiceTest" />
-      <option name="METHOD_NAME" value="아이디찾기성공" />
+      <option name="PACKAGE_NAME" value="cp.demo.service.IngredientServiceTest" />
+      <option name="MAIN_CLASS_NAME" value="cp.demo.service.IngredientServiceTest.DeleteMyIngredTest" />
+      <option name="METHOD_NAME" value="식재료삭제_성공" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IngredSearchTest.식재료목록_비어있음" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cp.demo.service.UserServiceTest.*" />
+          <option name="PATTERN" value="cp.demo.service.IngredientServiceTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="cp.demo.service.UserServiceTest" />
-      <option name="MAIN_CLASS_NAME" value="cp.demo.service.UserServiceTest.LoginServiceTest" />
+      <option name="PACKAGE_NAME" value="cp.demo.service.IngredientServiceTest" />
+      <option name="MAIN_CLASS_NAME" value="cp.demo.service.IngredientServiceTest.IngredSearchTest" />
+      <option name="METHOD_NAME" value="식재료목록_비어있음" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SaveMyIngredTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cp.demo.service.IngredientServiceTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cp.demo.service.IngredientServiceTest" />
+      <option name="MAIN_CLASS_NAME" value="cp.demo.service.IngredientServiceTest.SaveMyIngredTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="joinServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SaveMyIngredTest.원래가지고있던식재료가_등록될때" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cp.demo.service.UserServiceTest.*" />
+          <option name="PATTERN" value="cp.demo.service.IngredientServiceTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="cp.demo.service" />
-      <option name="MAIN_CLASS_NAME" value="cp.demo.service.joinServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="joinServiceTest.회원가입실패_입력값없음" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="demo.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cp.demo.service.UserServiceTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="cp.demo.service" />
-      <option name="MAIN_CLASS_NAME" value="cp.demo.service.joinServiceTest" />
-      <option name="METHOD_NAME" value="회원가입실패_입력값없음" />
+      <option name="PACKAGE_NAME" value="cp.demo.service.IngredientServiceTest" />
+      <option name="MAIN_CLASS_NAME" value="cp.demo.service.IngredientServiceTest.SaveMyIngredTest" />
+      <option name="METHOD_NAME" value="원래가지고있던식재료가_등록될때" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -224,11 +229,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.FindServiceTest" />
-        <item itemvalue="JUnit.FindServiceTest.아이디찾기성공" />
-        <item itemvalue="JUnit.LoginServiceTest" />
-        <item itemvalue="JUnit.joinServiceTest" />
-        <item itemvalue="JUnit.joinServiceTest.회원가입실패_입력값없음" />
+        <item itemvalue="JUnit.DeleteMyIngredTest.식재료삭제_성공" />
+        <item itemvalue="JUnit.DeleteMyIngredTest" />
+        <item itemvalue="JUnit.SaveMyIngredTest.원래가지고있던식재료가_등록될때" />
+        <item itemvalue="JUnit.SaveMyIngredTest" />
+        <item itemvalue="JUnit.IngredSearchTest.식재료목록_비어있음" />
       </list>
     </recent_temporary>
   </component>
@@ -248,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672750031072</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="UserService fin. (TDD)">
+      <created>1673414643262</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1673414643262</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -264,6 +276,17 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create spring project" />
-    <option name="LAST_COMMIT_MESSAGE" value="create spring project" />
+    <MESSAGE value="UserService fin. (TDD)" />
+    <option name="LAST_COMMIT_MESSAGE" value="UserService fin. (TDD)" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

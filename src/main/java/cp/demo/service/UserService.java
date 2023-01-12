@@ -6,24 +6,20 @@ import cp.demo.domain.entity.UserEntity;
 import cp.demo.domain.repository.UserRepository;
 import cp.exception.*;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mail.MailException;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 
-import net.bytebuddy.implementation.bytecode.Throw;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import javax.transaction.Transactional;
-import java.lang.module.FindException;
 import java.util.Optional;
 
 @RequiredArgsConstructor
-@Transactional
 @Service
+@Transactional(readOnly = true)
 public class UserService implements UserDetailsService {
 
     private final UserRepository userRepository;
@@ -39,6 +35,7 @@ public class UserService implements UserDetailsService {
      * @param password
      * @return
      */
+    @Transactional
     public UserEntity join(String userId, String password){
         final Optional<UserEntity> result = userRepository.findById(userId);
         if (result.isPresent()) {
@@ -90,6 +87,7 @@ public class UserService implements UserDetailsService {
      * @param name
      * @param email
      */
+    @Transactional
     public UserEntity findPw(String userId, String name, String email){
         Optional<UserEntity> user= userRepository.findByUserIdAndNameAndEmail(userId,name,email);
 
@@ -145,6 +143,7 @@ public class UserService implements UserDetailsService {
     /**
      *  마이페이지 정보 수정 서비스
      */
+    @Transactional
     public UserEntity modifyUser(UserDTO userDTO,String userId){
         UserEntity userEntity=userRepository.findById(userId).get();
         userEntity.setName(userDTO.getName());
