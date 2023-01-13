@@ -25,16 +25,15 @@ import static org.mockito.Mockito.*;
 @ExtendWith(MockitoExtension.class)
 public class SaveMyIngredTest {
     @InjectMocks
-    IngredientService ingredientService;
+    private IngredientService ingredientService;
 
     @Mock
-    UserRepository userRepository;
+    private UserRepository userRepository;
 
     @Mock
-    IngredientRepository ingredientRepository;
-
+    private IngredientRepository ingredientRepository;
     @Mock
-    MyIngredientRepository myIngredientRepository;
+    private MyIngredientRepository myIngredientRepository;
     final private String userId="user";
 
 //    -해당하는 재료를 찾을 필요가 없어서 제외-
@@ -65,7 +64,7 @@ public class SaveMyIngredTest {
         doReturn(myIngredientEntity).when(myIngredientRepository).findByUserEntity_UserIdAndIngredName(userId,"쌀");
         //when
         MyIngredientEntity result= ingredientService.saveMyIngredient(map,userId);
-        //then
+        //verify
         verify(myIngredientRepository,times(1)).save(any(MyIngredientEntity.class));
     }
     @Test

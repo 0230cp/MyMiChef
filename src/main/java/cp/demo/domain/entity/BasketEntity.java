@@ -23,15 +23,15 @@ public class BasketEntity {
     @JoinColumn(name = "userId",columnDefinition = "varchar(256)")
     private UserEntity userEntity;
 
-    @ManyToOne()
-    @JoinColumn(name = "myMealId",columnDefinition = "INT")
-    private MyMealEntity myMealEntity;
+//    @ManyToOne()
+//    @JoinColumn(name = "myMealId",columnDefinition = "INT")
+//    private MyMealEntity myMealEntity;
 
     @Column(name = "ingredName", columnDefinition = "varchar(256)")
     private String ingredName;
 
     @Column(name = "capacity", columnDefinition = "INT")
-    private Long capacity;
+    private int capacity;
 
     @Column(name = "unit", columnDefinition = "varchar(256)")
     private String unit;

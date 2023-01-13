@@ -9,4 +9,5 @@ import java.util.Optional;
 public interface MyIngredientRepository extends JpaRepository<MyIngredientEntity, Long> {
     List<MyIngredientEntity> findByUserEntity_UserId(String userId);
     MyIngredientEntity findByUserEntity_UserIdAndIngredName(String userId,String ingredName);
+
 }

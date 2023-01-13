@@ -8,7 +8,6 @@ import java.util.List;
 import java.util.Optional;
 
 public interface MenuRepository extends JpaRepository<MenuEntity, Long>{
-    List<MenuEntity> defaultRecommend();
 
     MenuEntity findByMenuName(String menuName);
 }
