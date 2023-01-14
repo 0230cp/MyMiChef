@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface IngredientRepository extends JpaRepository<IngredientEntity, Long> {
+    List<IngredientEntity> findByMenuEntity_MenuId(String menuId);
 
    @Query(nativeQuery = true,
            value = "select * from menutbl " +

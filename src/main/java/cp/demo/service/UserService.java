@@ -24,10 +24,8 @@ public class UserService implements UserDetailsService {
 
     private final UserRepository userRepository;
 
-    private final UserServiceException userServiceException;
-
     private final PasswordEncoder passwordEncoder;
-    private final JavaMailSender emailsender;
+    private JavaMailSender emailSender;
     /**
      * 회원가입 서비스
      *
@@ -104,7 +102,7 @@ public class UserService implements UserDetailsService {
         UserEntity userEntity= user.get();
         userEntity.setPassword(passwordEncoder.encode(password));
         userRepository.save(userEntity);
-        emailsender.send(message);
+        emailSender.send(message);
 
         return userEntity;
     }
