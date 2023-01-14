@@ -5,6 +5,7 @@ import cp.demo.domain.entity.MyIngredientEntity;
 import cp.demo.domain.entity.UserEntity;
 import cp.demo.domain.repository.BasketRepository;
 import cp.demo.domain.repository.MyIngredientRepository;
+import cp.demo.domain.repository.UserRepository;
 import cp.demo.service.BasketService;
 import cp.exception.UserServiceErrorResult;
 import cp.exception.UserServiceException;
@@ -13,6 +14,8 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+
+import java.util.Optional;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -26,6 +29,8 @@ public class BasketToMyIngredientTest {
     private BasketRepository basketRepository;
     @Mock
     private MyIngredientRepository myIngredientRepository;
+    @Mock
+    private UserRepository userRepository;
     final private String userId="user";
     final private String ingredName="쌀";
     @Test
@@ -44,6 +49,7 @@ public class BasketToMyIngredientTest {
         final UserEntity user= UserEntity.builder().userId(userId).build();
         final BasketEntity basketEntity=BasketEntity.builder().userEntity(user).ingredName(ingredName).build();
         doReturn(basketEntity).when(basketRepository).findByUserEntity_UserIdAndIngredName(userId,ingredName);
+        doReturn(Optional.of(user)).when(userRepository).findById(userId);
         //when
         basketService.basketToMyIngredient(userId,ingredName);
         //verify

@@ -5,6 +5,7 @@ import cp.demo.domain.repository.*;
 import cp.exception.UserServiceErrorResult;
 import cp.exception.UserServiceException;
 import lombok.RequiredArgsConstructor;
+import org.apache.catalina.User;
 import org.json.JSONObject;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -105,6 +106,12 @@ public class BasketService {
 
         return jsonObject;
     }
+
+    /**
+     * 장바구니에서 내 식재료에 추가 버튼
+     * @param userId
+     * @param ingredName
+     */
     @Transactional
     public void basketToMyIngredient(String userId,String ingredName){
         BasketEntity basketEntity= basketRepository.findByUserEntity_UserIdAndIngredName(userId,ingredName);
@@ -112,10 +119,16 @@ public class BasketService {
             throw new UserServiceException(UserServiceErrorResult.INGREDIENT_NOT_FOUND);
         MyIngredientEntity myIngredientEntity=myIngredientRepository
                                                     .findByUserEntity_UserIdAndIngredName(userId,ingredName);
-        if(myIngredientEntity==null)
-            myIngredientEntity=MyIngredientEntity.builder().build();
+        if(myIngredientEntity==null) {
+            UserEntity user=userRepository.findById(userId).get();
+            myIngredientEntity = MyIngredientEntity.builder().userEntity(user)
+                            .ingredName(basketEntity.getIngredName()).capacity(basketEntity.getCapacity())
+                    .unit(basketEntity.getUnit()).build();
+        }
+        else
+            myIngredientEntity.setCapacity(myIngredientEntity.getCapacity()+basketEntity.getCapacity());
         basketRepository.delete(basketEntity);
-
+        myIngredientRepository.save(myIngredientEntity);
 
     }
 
