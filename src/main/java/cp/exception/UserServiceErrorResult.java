@@ -13,7 +13,8 @@ public enum UserServiceErrorResult {
     ,USER_NOT_FOUND(HttpStatus.BAD_REQUEST, "User was not found")
     ,INGREDIENT_NOT_FOUND(HttpStatus.BAD_REQUEST,"Ingredient was not found")
     ,INGREDIENT_NOT_MATCHED(HttpStatus.BAD_REQUEST,"Ingredient doesn't match")
-    ,MENU_NOT_FOUND(HttpStatus.BAD_REQUEST,"Menu was not found");
+    ,MENU_NOT_FOUND(HttpStatus.BAD_REQUEST,"Menu was not found")
+    ,BASKET_IS_EMPTY(HttpStatus.BAD_REQUEST,"My basket is empty");
 
     private final HttpStatus httpStatus;
     private final String message;

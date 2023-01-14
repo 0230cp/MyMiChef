@@ -86,7 +86,7 @@ public class UserService implements UserDetailsService {
      * @param email
      */
     @Transactional
-    public UserEntity findPw(String userId, String name, String email){
+    public UserEntity findPw(String userId, String name, String email) throws UserServiceException{
         Optional<UserEntity> user= userRepository.findByUserIdAndNameAndEmail(userId,name,email);
 
         if(user.isEmpty()){

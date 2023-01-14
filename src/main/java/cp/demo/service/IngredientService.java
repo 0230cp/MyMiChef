@@ -32,8 +32,6 @@ public class IngredientService {
     public JSONObject getIngredient(){
         JSONObject jsonObject= new JSONObject();
         List<IngredientEntity> allIngred= ingredientRepository.findAll();
-        if(allIngred.isEmpty())
-            throw new UserServiceException(UserServiceErrorResult.INGREDIENT_NOT_FOUND);
 
         for(int i=0;i<allIngred.size();i++){
             jsonObject.put(allIngred.get(i).getName(),allIngred.get(i).getUnit());
