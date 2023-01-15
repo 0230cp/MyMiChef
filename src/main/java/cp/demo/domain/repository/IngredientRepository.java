@@ -20,5 +20,5 @@ public interface IngredientRepository extends JpaRepository<IngredientEntity, Lo
                 "order by count(name) DESC")
 
    IngredientEntity findByName(String menuName);
-
+//
 }
