@@ -19,6 +19,7 @@ public interface IngredientRepository extends JpaRepository<IngredientEntity, Lo
                 "group by name having count(name) >= 1 " +
                 "order by count(name) DESC")
 
+
    IngredientEntity findByName(String menuName);
 
 }
