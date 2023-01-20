@@ -129,7 +129,6 @@ public class BasketService {
             myIngredientEntity.setCapacity(myIngredientEntity.getCapacity()+basketEntity.getCapacity());
         basketRepository.delete(basketEntity);
         myIngredientRepository.save(myIngredientEntity);
-
     }
 
 }
